@@ -65,6 +65,4 @@ Optional section. Talk about any risks here.
 
 ## Reviews
 
-| Reviewed by                   | Date       | Notes |
-| ----------------------------- | ---------  | ------|
-| name                          | date       | ?     |
+Reviews on the pull request will suffice for the approval process. At least 2 approvals are required prior to this ADR being merged. The ADR must also remain open for at least one week.
