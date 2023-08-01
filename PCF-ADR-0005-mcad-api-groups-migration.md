@@ -26,16 +26,9 @@ The choice of the current MCAD API groups predates the acquisition of the `codef
 Some of the MCAD APIs, mainly the AppWrapper API, is used by downstream projects, as well as end-users.
 From a client standpoint, the impacts of an API group change imply updating the `apiVersion` field of all the MCAD resources they define, as well as updating the group segment of the REST endpoints, created from the CRDs, that they consume.
 
-A migration plan is needed to provide these clients with a smooth transition to the new API groups.
-
 ## Goals
 
-The goal is to inform a _progressive_ migration path, i.e., one that does not require all the downstream projects to handle the impacts in locked steps with MCAD.
-A project like [TorchX](https://github.com/pytorch/torchx), which integrates with MCAD[^1] via the AppWrapper API, has its own release cadence, and it’d be very challenging to have all the components migrated within a single migration cycle, without breaking compatibility.
-
-Stated differently, the goal is to have that migration path started as soon as possible, when the new API group is made available, and have each downstream project, and end-users, walking the migration path at their own pace, while they decide to upgrade their dependency.
-
-[^1]: https://pytorch.org/torchx/latest/schedulers/kubernetes_mcad.html
+The goal is to inform a migration path, to provide these clients with a transition to the new API groups, that balances compatibility and costs.
 
 ## Non-Goals
 
@@ -44,7 +37,11 @@ Downstream projects and end-users will have to address the impacts manually to p
 
 ## How
 
-The progressive migration path is implemented in three phases as follows:
+A project like [TorchX](https://github.com/pytorch/torchx), which integrates with MCAD[^1] via the AppWrapper API, has its own release cadence, and it'd be challenging to have it migrated within a single migration cycle, without breaking compatibility.
+
+[^1]: https://pytorch.org/torchx/latest/schedulers/kubernetes_mcad.html
+
+The following plan proposes a progressive migration path, implemented in three phases, as follows:
 
 ### Phase 1: Add Dual API Groups Support
 
@@ -97,7 +94,26 @@ Once all the downstream projects have migrated, and existing users acknowledged 
 
 ## Open Questions
 
-* Is dual mode support necessary for the quota APIs? While they’ll eventually be public APIs, these are rather new, and may not be actually used yet.
+* Is dual mode support necessary for the quota APIs?
+  While they'll eventually be public APIs, these are rather new, and may not be actually used yet.
+
+## Alternatives
+
+Given the TorchX MCAD scheduler is currently delivered as part of the [CodeFlare fork of TorchX](https://github.com/project-codeflare/torchx), all the impacted components are managed internally.
+That means a _one-shot_ migration can be a viable alternative, assuming we accept the development branches of these components may transiently break, within the  span of that _one-shot_ migration release cycle.
+
+As an example, this _one-shot_ migration could be achieved during the next development cycle of the CodeFlare stack, i.e., the upcoming v0.7.0 release, in the following order:
+
+| Component        | Version |
+| ---------------- | ------- |
+| MCAD             | v1.34.0 |
+| InstaScale       | v0.7.0  |
+| CodeFlare TorchX | v0.7.0  |
+| CodeFlare SDK    | v0.7.0  |
+
+The ODH Data Science Pipeline operator update can be done as soon as ODH upgrades to that newer CodeFlare version.
+
+The KubeRay documentation can be updated independently.
 
 ## Stakeholder Impacts
 
