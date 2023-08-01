@@ -81,6 +81,7 @@ The following downstream projects must be migrated to using the new API groups:
 * The TorchX MCAD scheduler: https://github.com/pytorch/torchx/blob/main/torchx/schedulers/kubernetes_mcad_scheduler.py
 * The CodeFlare SDK: https://github.com/project-codeflare/codeflare-sdk
 * ODH Data Science Pipeline operator: https://github.com/opendatahub-io/data-science-pipelines-operator
+* KubeRay documentation: https://ray-project.github.io/kuberay/guidance/kuberay-with-MCAD (no mention of the AppWrapper API group, but the links to the project materials can be updated)
 
 ### Phase 3: Decommission old API Groups
 
