@@ -122,7 +122,8 @@ The KubeRay documentation can be updated independently.
 | CodeFlare SDK                 | Mustafa Eyceoz     |            | yes       |
 | MCAD                          | Abhishek Malvankar |            | yes       |
 | InstaScale                    | Abhishek Malvankar |            | yes       |
-| CodeFlare Operator            | Anish Asthana      |            | no        |
+| KubeRay                       | Laurentiu Bradin   |            | Doc only ATM, maybe Kuberay API server |
+| CodeFlare Operator            | Anish Asthana      |            | yes       |
 
 ## Reviews
 
