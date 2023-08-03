@@ -37,69 +37,7 @@ Downstream projects and end-users will have to address the impacts manually to p
 
 ## How
 
-A project like [TorchX](https://github.com/pytorch/torchx), which integrates with MCAD[^1] via the AppWrapper API, has its own release cadence, and it'd be challenging to have it migrated within a single migration cycle, without breaking compatibility.
-
-[^1]: https://pytorch.org/torchx/latest/schedulers/kubernetes_mcad.html
-
-The following plan proposes a progressive migration path, implemented in three phases, as follows:
-
-### Phase 1: Add Dual API Groups Support
-
-The new API groups are introduced in MCAD, along with the existing ones.
-Functionally, the MCAD and InstaScale controllers are updated, so they can equally reconcile the old and new APIs.
-
-To implement that dual API groups support, it may be necessary to duplicate the MCAD API packages, as well as the generated client packages.
-Indeed, [controller-runtime](https://github.com/kubernetes-sigs/controller-runtime) APIs, which are used by InstaScale, are designed to use the API structs, and require the mapping between the API structs and the Group/Version/Kind(GVK)s to be an injection.
-Otherwise stated, controller-runtime mandates the scheme holding the mapping between the API structs and the GVKs to have a single GVK entry per API struct.
-
-This boils down to the following tasks:
-
-* Duplicate the API packages, with the new API groups, and mark the old ones as deprecated
-* Generate the new CRDs by leveraging: https://github.com/project-codeflare/multi-cluster-app-dispatcher/pull/456
-* Mark the old CRDs as internal, using the `operators.operatorframework.io/internal-objects` annotation
-* Generate the new client packages, by leveraging: https://github.com/project-codeflare/multi-cluster-app-dispatcher/issues/514
-* Duplicate the MCAD controllers, to reconcile the new APIs
-* Add RBAC for the new API groups to MCAD manifests (both in Helm charts and in the CodeFlare operator)
-* Update tests, documentation and samples to use the new API groups
-* Upgrade InstaScale to the newer MCAD version
-* Duplicate the InstaScale controller, to reconcile the new AppWrapper API
-* Add RBAC for the new API groups to InstaScale manifests (both in Helm charts and in the CodeFlare operator)
-
-Note: all the duplications will be cleaned up in Phase 3.
-
-The internal APIs may directly be migrated to the new API groups, without implementing dual support for them.
-
-### Phase 2: Progressive Migration
-
-The migration should be announced on the usual communication channels.
-
-The following downstream projects must be migrated to using the new API groups:
-
-* The TorchX MCAD scheduler: https://github.com/pytorch/torchx/blob/main/torchx/schedulers/kubernetes_mcad_scheduler.py
-* The CodeFlare SDK: https://github.com/project-codeflare/codeflare-sdk
-* ODH Data Science Pipeline operator: https://github.com/opendatahub-io/data-science-pipelines-operator
-* KubeRay documentation: https://ray-project.github.io/kuberay/guidance/kuberay-with-MCAD (no mention of the AppWrapper API group, but the links to the project materials can be updated)
-
-### Phase 3: Decommission old API Groups
-
-Once all the downstream projects have migrated, and existing users acknowledged the migration plan, the following clean-up tasks should be performed:
-
-* Delete the old MCAD API packages
-* Delete the old MCAD client packages
-* Delete the old MCAD CRDs
-* Remove RBAC for the old API groups from MCAD manifests (both in Helm charts and in the CodeFlare operator)
-* Delete the duplicated MCAD controllers
-* Delete the duplicated InstaScale controllers
-* Remove RBAC for the old API groups from InstaScale manifests
-
-## Open Questions
-
-* Is dual mode support necessary for the quota APIs?
-  While they'll eventually be public APIs, these are rather new, and may not be actually used yet.
-
-## Alternatives
-
-Given the TorchX MCAD scheduler is currently delivered as part of the [CodeFlare fork of TorchX](https://github.com/project-codeflare/torchx), all the impacted components are managed internally.
+Given the [TorchX MCAD scheduler](https://pytorch.org/torchx/latest/schedulers/kubernetes_mcad.html) is currently delivered as part of the [CodeFlare fork of TorchX](https://github.com/project-codeflare/torchx), all the impacted components are managed internally.
 That means a _one-shot_ migration can be a viable alternative, assuming we accept the development branches of these components may transiently break, within the  span of that _one-shot_ migration release cycle.
 
 As an example, this _one-shot_ migration could be achieved during the next development cycle of the CodeFlare stack, i.e., the upcoming v0.7.0 release, in the following order:
@@ -114,6 +52,21 @@ As an example, this _one-shot_ migration could be achieved during the next devel
 The ODH Data Science Pipeline operator update can be done as soon as ODH upgrades to that newer CodeFlare version.
 
 The KubeRay documentation can be updated independently.
+
+## Alternatives
+
+A _progressive_ migration path could be implemented, i.e., one that does not require all the downstream projects to handle the impacts in locked steps with MCAD.
+The goal would be to have that migration path started as soon as possible, and have each downstream project, and end-user, walking the migration path at their own pace, when they decide to upgrade their dependency.
+
+That strategy would require the new API groups to be introduced in MCAD, along with the existing ones.
+Functionally, the MCAD and InstaScale controllers would be updated, so they can equally reconcile the old and new APIs.
+
+To implement that dual API groups support, it would be necessary to duplicate the MCAD API packages, as well as the generated client packages.
+Indeed, [controller-runtime](https://github.com/kubernetes-sigs/controller-runtime) APIs, which are used by InstaScale, are designed to use the API structs, and require the mapping between the API structs and the Group/Version/Kind(GVK)s to be a bijection.
+Otherwise stated, controller-runtime mandates the scheme holding the mapping between the API structs and the GVKs to have a single GVK entry per API struct.
+
+While that'd give extra flexibility for downstream projects, and end-users, to migrate, this would increase the complexity of the migration.
+Duplicated code would have to live in the MCAD codebase, for a potentially unbounded period of time.
 
 ## Stakeholder Impacts
 
