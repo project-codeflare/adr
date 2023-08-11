@@ -82,7 +82,7 @@ The proposal includes the addition of 3 templates via a drop down menu which wil
 
     Add as applicable and when known:
 
-    * OS: 1) MacOS, 2) Linux, 3) Windows, 4) iOS, 5) Android: [1 - 5]
+    * OS: 1) MacOS, 2) Linux, 3) Windows: [1 - 3]
     * OS Version: [e.g. RedHat Linux X.Y.Z, MacOS Monterey, ...]
     * Browser (UI issues): 1) Chrome, 2) Safari, 3) Firefox, 4) Other (describe):  [1 - 4 + description?]
     * Browser Version (UI issues): [e.g. Firefix 97.0]
