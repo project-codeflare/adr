@@ -55,6 +55,15 @@ The proposal includes the addition of 3 templates via a drop down menu which wil
 
     A clear and concise description of the bug.
 
+    ### Codeflare Stack Component Versions
+    Please specify the component versions in which you have encountered this bug.
+
+    Codeflare SDK:
+    MCAD:
+    Instascale:
+    Codeflare Operator:
+    Other: 
+
     ### Steps to Reproduce the Bug
 
     1. Go to '...'
