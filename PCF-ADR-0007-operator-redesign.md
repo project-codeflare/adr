@@ -144,8 +144,6 @@ struct CodeFlareOperatorConfiguration {
 The later `struct` would be sourced from a ConfigMap, mounted into the operator deployment container.
 To follows the Operator SDK best practice, which states an operator [should always be able to deploy and come up without user input](https://sdk.operatorframework.io/docs/best-practices/best-practices/#summary-1), that ConfigMap would be created when the operator starts, if it doesn't exist already, and initialized with sensible defaults.
 
-We might want to package that ConfigMap as an [additional resource](https://olm.operatorframework.io/docs/tasks/creating-operator-manifests/#packaging-additional-objects-alongside-an-operator) in the OLM bundle.
-
 ### Packaging and Automation
 
 The building and publishing of the MCAD and InstaScale container images can be removed.
