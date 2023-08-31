@@ -43,7 +43,8 @@ The goal is to refactor the CodeFlare operator, such that:
 
 ## Non-Goals
 
-It is not a goal to define a mutli-tenancy model for the CodeFlare operator.
+* While the upgrade scenario should work, it is not a goal to provide automated migration for existing users, in particular to migrate the changes they may have introduced, in the MCAD and InstaScale resources, automatically.
+* It is not a goal to define a mutli-tenancy model for the CodeFlare operator.
 
 ## How
 
@@ -143,6 +144,8 @@ struct CodeFlareOperatorConfiguration {
 
 The later `struct` would be sourced from a ConfigMap, mounted into the operator deployment container.
 To follows the Operator SDK best practice, which states an operator [should always be able to deploy and come up without user input](https://sdk.operatorframework.io/docs/best-practices/best-practices/#summary-1), that ConfigMap would be created when the operator starts, if it doesn't exist already, and initialized with sensible defaults.
+
+We'll provide documentation for existing users, on how to migrate their changes in the MCAD and InstaScale resources, over to the new ConfigMap resource.
 
 ### Packaging and Automation
 
