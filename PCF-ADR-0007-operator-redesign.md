@@ -113,12 +113,23 @@ import (
 	instascale "github.com/project-codeflare/instascale/pkg/config"
 )
 
+struct InstaScaleConfiguration {
+	// Enabled controls whether the InstaScale controller is started.
+	// It may defaults to true on platforms that InstaScale supports.
+	// Otherwise defaults to false.
+	Enabled *bool `json:"enabled,omitempty"`
+
+	// The InstaScale controller configuration
+	instascale.InstaScaleConfiguration `json:",inline,omitempty"`
+}
+
 struct CodeFlareOperatorConfiguration {
 	// The MCAD controller configuration
 	MCAD *mcad.MCADConfiguration `json:"mcad,omitempty"`
 
 	// The InstaScale controller configuration
-	InstaScale *instascale.InstaScaleConfiguration `json:"instascale,omitempty"`
+	InstaScale *InstaScaleConfiguration `json:"instascale,omitempty"`
+
 	// ClientConnection configures the connection to the cluster
 	ClientConnection *configv1alpha1.ClientConnectionConfiguration `json:"clientConnection,omitempty"`
 
