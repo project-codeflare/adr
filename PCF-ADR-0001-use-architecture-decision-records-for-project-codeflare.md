@@ -1,15 +1,15 @@
 # Use Architecture Decision Records for Project CodeFlare
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | insert date              |
-| Scope          |                          |
-| Status         | Draft                    |
+|                |                                |
+| -------------- | ------------------------------ |
+| Date           | insert date                    |
+| Scope          |                                |
+| Status         | implemented                    |
 | Authors        | [Anish Asthana](@anishasthana) |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
-| Issues         |                          |
-| Other docs:    | none                     |
+| Supersedes     | N/A                            |
+| Superseded by: | N/A                            |
+| Issues         |                                |
+| Other docs:    | none                           |
 
 ## Project CodeFlare Architecture Decision Records
 
@@ -39,13 +39,13 @@ ADRs will require at least two approvals in addition to being open for at least 
 
 ## Reviews
 
-| Reviewed by                   | Date       | Notes |
-| ----------------------------- | ---------  | ------|
+| Reviewed by        | Date       | Notes    |
+| ------------------ | ---------- | -------- |
 | Abhishek Malvankar | 04-18-2023 | Approved |
-| Alex Corvin | 04-18-2023 | Approved |
-| Ashish Kamra | 04-19-2023 | Approved |
+| Alex Corvin        | 04-18-2023 | Approved |
+| Ashish Kamra       | 04-19-2023 | Approved |
 | Kevin Postlethwait | 04-18-2023 | Approved |
-| Mustafa Eyceoz | 04-18-2023 | Approved |
+| Mustafa Eyceoz     | 04-18-2023 | Approved |
 
 ## References
 

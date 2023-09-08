@@ -3,16 +3,16 @@
 <!-- copy and paste this template to start authoring your own ADR -->
 <!-- remove this comment block too -->
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | insert date              |
-| Scope          |                          |
-| Status         | Draft                    |
-| Authors        | [name](@github-username) |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
-| Issues         |                          |
-| Other docs:    | none                     |
+|                |                                                                                  |
+| -------------- | -------------------------------------------------------------------------------- |
+| Date           | insert date                                                                      |
+| Scope          |                                                                                  |
+| Status         | provisional\|implementable\|implemented\|deferred\|rejected\|withdrawn\|replaced |
+| Authors        | [name](@github-username)                                                         |
+| Supersedes     | N/A                                                                              |
+| Superseded by: | N/A                                                                              |
+| Issues         |                                                                                  |
+| Other docs:    | none                                                                             |
 
 ## What
 
@@ -52,12 +52,12 @@ Optional section. Talk about any risks here.
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts     | Date       | Impacted? |
-| ----------------------------- | ---------------- | ---------- | --------- |
-| CodeFlare SDK                 | key contact name | date       | ?         |
-| MCAD                          | key contact name | date       | ?         |
-| InstaScale                    | key contact name | date       | ?         |
-| CodeFlare Operator            | key contact name | date       | ?         |
+| Group              | Key Contacts     | Date | Impacted? |
+| ------------------ | ---------------- | ---- | --------- |
+| CodeFlare SDK      | key contact name | date | ?         |
+| MCAD               | key contact name | date | ?         |
+| InstaScale         | key contact name | date | ?         |
+| CodeFlare Operator | key contact name | date | ?         |
 
 ## References
 
