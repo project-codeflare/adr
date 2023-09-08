@@ -1,13 +1,13 @@
 # CodeFlare Operator Redesign
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | 08/28/2023               |
-| Scope          |                          |
-| Status         | Proposed                 |
-| Authors        | [Antonin Stefanutti](@astefanutti) |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
+|                |                                                                    |
+| -------------- | ------------------------------------------------------------------ |
+| Date           | 08/28/2023                                                         |
+| Scope          |                                                                    |
+| Status         | implementable                                                      |
+| Authors        | [Antonin Stefanutti](@astefanutti)                                 |
+| Supersedes     | N/A                                                                |
+| Superseded by: | N/A                                                                |
 | Issues         | https://github.com/project-codeflare/codeflare-operator/issues/153 |
 
 ## What
@@ -188,12 +188,12 @@ While this would follow Operator SDK best practices, this would not provide the 
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts                           | Date       | Impacted? |
-| ----------------------------- | -------------------------------------- | ---------- | --------- |
-| CodeFlare SDK                 | Mustafa Eyceoz, Dimitri Saridakis      |            | no        |
-| MCAD                          | Abhishek Malvankar, Antonin Stefanutti |            | yes       |
-| InstaScale                    | Abhishek Malvankar, Dimitri Saridakis  |            | yes       |
-| CodeFlare Operator            | Anish Asthana, Antonin Stefanutti      |            | yes       |
+| Group              | Key Contacts                           | Date | Impacted? |
+| ------------------ | -------------------------------------- | ---- | --------- |
+| CodeFlare SDK      | Mustafa Eyceoz, Dimitri Saridakis      |      | no        |
+| MCAD               | Abhishek Malvankar, Antonin Stefanutti |      | yes       |
+| InstaScale         | Abhishek Malvankar, Dimitri Saridakis  |      | yes       |
+| CodeFlare Operator | Anish Asthana, Antonin Stefanutti      |      | yes       |
 
 ## Reviews
 

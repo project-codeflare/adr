@@ -1,15 +1,15 @@
 # Define testing strategy for Project CodeFlare
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | 06/14/2023               |
-| Scope          |                          |
-| Status         | Proposed                 |
-| Authors        | [Karel Suta](@sutaakar), [Antonin Stefanutti](@astefanutti)  |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
-| Issues         |                          |
-| Other docs:    | [PCF-ADR-0003](https://github.com/project-codeflare/adr/blob/main/PCF-ADR-0003-codeflare-release-process.md)                      |
+|                |                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------ |
+| Date           | 06/14/2023                                                                                                   |
+| Scope          |                                                                                                              |
+| Status         | implemented                                                                                                  |
+| Authors        | [Karel Suta](@sutaakar), [Antonin Stefanutti](@astefanutti)                                                  |
+| Supersedes     | N/A                                                                                                          |
+| Superseded by: | N/A                                                                                                          |
+| Issues         |                                                                                                              |
+| Other docs:    | [PCF-ADR-0003](https://github.com/project-codeflare/adr/blob/main/PCF-ADR-0003-codeflare-release-process.md) |
 
 ## What
 
@@ -69,13 +69,13 @@ Release build check:
 
 #### Testing levels and Type of testing:
 
-| Test type/development cycle  | Feature developer | PR automated checks  | PR review by reviewer | Nightly automated checks  | Release automated checks |
-| ---------------------------- | ----------------- | -------------------- | --------------------- | ------------------------- | ------------------------ |
-| Manual testing               | Yes               | No                   | Yes                   | No                        | No                       |
-| Unit testing                 | Yes               | Yes                  | No                    | Yes                       | Yes                      |
-| End to end testing           | Yes               | Yes                  | No                    | Yes                       | Yes                      |
-| Integration testing          | Optional          | Yes                  | No                    | Yes                       | Yes                      |
-| Upgrade testing              | Optional          | Yes                  | No                    | Yes                       | Yes                      |
+| Test type/development cycle | Feature developer | PR automated checks | PR review by reviewer | Nightly automated checks | Release automated checks |
+| --------------------------- | ----------------- | ------------------- | --------------------- | ------------------------ | ------------------------ |
+| Manual testing              | Yes               | No                  | Yes                   | No                       | No                       |
+| Unit testing                | Yes               | Yes                 | No                    | Yes                      | Yes                      |
+| End to end testing          | Yes               | Yes                 | No                    | Yes                      | Yes                      |
+| Integration testing         | Optional          | Yes                 | No                    | Yes                      | Yes                      |
+| Upgrade testing             | Optional          | Yes                 | No                    | Yes                      | Yes                      |
 
 Glossary:
 
@@ -254,12 +254,12 @@ We didn't consider any other alternatives
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts       | Date       | Impacted? |
-| ----------------------------- | ------------------ | ---------- | --------- |
-| CodeFlare SDK                 | Mustafa Eyceoz     |            | yes       |
-| MCAD                          | Abhishek Malvankar |            | yes       |
-| InstaScale                    | Abhishek Malvankar |            | yes       |
-| CodeFlare Operator            | Anish Asthana      |            | yes       |
+| Group              | Key Contacts       | Date | Impacted? |
+| ------------------ | ------------------ | ---- | --------- |
+| CodeFlare SDK      | Mustafa Eyceoz     |      | yes       |
+| MCAD               | Abhishek Malvankar |      | yes       |
+| InstaScale         | Abhishek Malvankar |      | yes       |
+| CodeFlare Operator | Anish Asthana      |      | yes       |
 
 ## Reviews
 

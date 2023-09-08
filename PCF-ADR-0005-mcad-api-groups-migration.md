@@ -1,13 +1,13 @@
 # MCAD API Groups Migration Plan
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | 07/31/2023               |
-| Scope          |                          |
-| Status         | Proposed                 |
-| Authors        | [Antonin Stefanutti](@astefanutti) |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
+|                |                                                                              |
+| -------------- | ---------------------------------------------------------------------------- |
+| Date           | 07/31/2023                                                                   |
+| Scope          |                                                                              |
+| Status         | implementable                                                                |
+| Authors        | [Antonin Stefanutti](@astefanutti)                                           |
+| Supersedes     | N/A                                                                          |
+| Superseded by: | N/A                                                                          |
 | Issues         | https://github.com/project-codeflare/multi-cluster-app-dispatcher/issues/352 |
 
 ## What
@@ -70,13 +70,13 @@ Duplicated code would have to live in the MCAD codebase, for a potentially unbou
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts       | Date       | Impacted? |
-| ----------------------------- | ------------------ | ---------- | --------- |
-| CodeFlare SDK                 | Mustafa Eyceoz     |            | yes       |
-| MCAD                          | Abhishek Malvankar |            | yes       |
-| InstaScale                    | Abhishek Malvankar |            | yes       |
-| KubeRay                       | Laurentiu Bradin   |            | Doc only ATM, maybe Kuberay API server |
-| CodeFlare Operator            | Anish Asthana      |            | yes       |
+| Group              | Key Contacts       | Date | Impacted?                              |
+| ------------------ | ------------------ | ---- | -------------------------------------- |
+| CodeFlare SDK      | Mustafa Eyceoz     |      | yes                                    |
+| MCAD               | Abhishek Malvankar |      | yes                                    |
+| InstaScale         | Abhishek Malvankar |      | yes                                    |
+| KubeRay            | Laurentiu Bradin   |      | Doc only ATM, maybe Kuberay API server |
+| CodeFlare Operator | Anish Asthana      |      | yes                                    |
 
 ## Reviews
 

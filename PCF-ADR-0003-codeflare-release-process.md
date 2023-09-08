@@ -1,15 +1,15 @@
 # Standardized release process for Project CodeFlare
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | 04/28/2023               |
-| Scope          |                          |
-| Status         | Proposed                    |
+|                |                                                              |
+| -------------- | ------------------------------------------------------------ |
+| Date           | 04/28/2023                                                   |
+| Scope          |                                                              |
+| Status         | implemented                                                  |
 | Authors        | [Anish Asthana](@anishasthana) [Mustafa Eyceoz](@Maxusmusti) |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
-| Issues         |                          |
-| Other docs:    | PCF-ADR-002              |
+| Supersedes     | N/A                                                          |
+| Superseded by: | N/A                                                          |
+| Issues         |                                                              |
+| Other docs:    | PCF-ADR-002                                                  |
 
 ## What
 
@@ -111,12 +111,12 @@ We didn't consider any other alternatives
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts       | Date       | Impacted? |
-| ----------------------------- | ------------------ | ---------- | --------- |
-| CodeFlare SDK                 | Mustafa Eyceoz     | 04/28/2023  | yes       |
-| MCAD                          | Abhishek Malvankar | 04/28/2023  | yes       |
-| InstaScale                    | Abhishek Malvankar | 04/28/2023  | yes       |
-| CodeFlare Operator            | Anish Asthana      | 04/28/2023  | yes       |
+| Group              | Key Contacts       | Date       | Impacted? |
+| ------------------ | ------------------ | ---------- | --------- |
+| CodeFlare SDK      | Mustafa Eyceoz     | 04/28/2023 | yes       |
+| MCAD               | Abhishek Malvankar | 04/28/2023 | yes       |
+| InstaScale         | Abhishek Malvankar | 04/28/2023 | yes       |
+| CodeFlare Operator | Anish Asthana      | 04/28/2023 | yes       |
 
 ## Reviews
 

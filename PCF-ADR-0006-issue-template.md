@@ -1,15 +1,15 @@
 # Project CodeFlare - Issue Template
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | 8/11/2023                |
-| Scope          |                          |
-| Status         | Proposed                 |
-| Authors        | [Fiona Waters](@Fiona-Waters)   |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
-| Issues         | https://github.com/project-codeflare/.github/issues/8    |
-| Other docs:    | https://github.com/project-codeflare/.github/pull/14     |
+|                |                                                       |
+| -------------- | ----------------------------------------------------- |
+| Date           | 8/11/2023                                             |
+| Scope          |                                                       |
+| Status         | implemented                                           |
+| Authors        | [Fiona Waters](@Fiona-Waters)                         |
+| Supersedes     | N/A                                                   |
+| Superseded by: | N/A                                                   |
+| Issues         | https://github.com/project-codeflare/.github/issues/8 |
+| Other docs:    | https://github.com/project-codeflare/.github/pull/14  |
 
 ## What
 Currently when creating github issues for repositories within Project Codeflare we do not use any templates. The aim of this ADR is to propose adding a defined selection of templates that will allow team members to include all relevant information when creating an issue which will allow others to effectively pick it up and complete it.
@@ -123,16 +123,16 @@ We have not currently considered any alternatives.
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts       | Date       | Impacted? |
-| ----------------------------- | ----------------   | ---------- | --------- |
-| CodeFlare SDK                 | Mustafa Eyceoz     | date       | Yes       |
-| MCAD                          | Abhishek Malvankar | date       | Yes       |
-| InstaScale                    | Abhishek Malvankar | date       | Yes       |
-| CodeFlare Operator            | Anish Asthana      | date       | Yes       |
+| Group              | Key Contacts       | Date | Impacted? |
+| ------------------ | ------------------ | ---- | --------- |
+| CodeFlare SDK      | Mustafa Eyceoz     | date | Yes       |
+| MCAD               | Abhishek Malvankar | date | Yes       |
+| InstaScale         | Abhishek Malvankar | date | Yes       |
+| CodeFlare Operator | Anish Asthana      | date | Yes       |
 
 ## References
 
-* https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository 
+* https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
 
 ## Reviews
 

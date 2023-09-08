@@ -1,15 +1,15 @@
 # ADR 0002: Use GitHub Flow for Branching Strategy
 
-|                |                          |
-| -------------- | ------------------------ |
-| Date           | 4/19/2023                |
-| Scope          |                          |
-| Status         | Draft                    |
-| Authors        | [Kevin](@KPostOffice)    |
-| Supersedes     | N/A                      |
-| Superseded by: | N/A                      |
-| Issues         |                          |
-| Other docs:    | none                     |
+|                |                       |
+| -------------- | --------------------- |
+| Date           | 4/19/2023             |
+| Scope          |                       |
+| Status         | implemented           |
+| Authors        | [Kevin](@KPostOffice) |
+| Supersedes     | N/A                   |
+| Superseded by: | N/A                   |
+| Issues         |                       |
+| Other docs:    | none                  |
 
 ## What
 
@@ -168,12 +168,12 @@ branch is always in a deployable state.
 
 ## Stakeholder Impacts
 
-| Group                         | Key Contacts       | Date       | Impacted? |
-| ----------------------------- | ------------------ | ---------- | --------- |
-| CodeFlare SDK                 | Mustafa Eyceoz     | 4/19/2023  | yes       |
-| MCAD                          | Abhishek Malvankar | 4/19/2023  | yes       |
-| InstaScale                    | Abhishek Malvankar | 4/19/2023  | yes       |
-| CodeFlare Operator            | Anish Asthana      | 4/19/2023  | yes       |
+| Group              | Key Contacts       | Date      | Impacted? |
+| ------------------ | ------------------ | --------- | --------- |
+| CodeFlare SDK      | Mustafa Eyceoz     | 4/19/2023 | yes       |
+| MCAD               | Abhishek Malvankar | 4/19/2023 | yes       |
+| InstaScale         | Abhishek Malvankar | 4/19/2023 | yes       |
+| CodeFlare Operator | Anish Asthana      | 4/19/2023 | yes       |
 
 ## References
 
@@ -183,7 +183,7 @@ branch is always in a deployable state.
 
 ## Reviews
 
-| Reviewed by                   | Date       | Notes |
-| ----------------------------- | ---------  | ------|
-| Anish Asthana                 | 4/21       |       |
-| Alex Corvin                   | 4/20       |       |
+| Reviewed by   | Date | Notes |
+| ------------- | ---- | ----- |
+| Anish Asthana | 4/21 |       |
+| Alex Corvin   | 4/20 |       |
