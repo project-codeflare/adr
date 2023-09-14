@@ -52,12 +52,15 @@ Optional section. Talk about any risks here.
 
 ## Stakeholder Impacts
 
-| Group              | Key Contacts     | Date | Impacted? |
-| ------------------ | ---------------- | ---- | --------- |
-| CodeFlare SDK      | key contact name | date | ?         |
-| MCAD               | key contact name | date | ?         |
-| InstaScale         | key contact name | date | ?         |
-| CodeFlare Operator | key contact name | date | ?         |
+| Group                  | Key Contacts     | Date | Impacted? |
+| ---------------------- | ---------------- | ---- | --------- |
+| CodeFlare Operator     | key contact name | date | ?         |
+| CodeFlare SDK          | key contact name | date | ?         |
+| Dashboard              | key contact name | date | ?         |
+| InstaScale             | key contact name | date | ?         |
+| MCAD                   | key contact name | date | ?         |
+| Data Science Pipelines | HumairAK         | date | ?         |
+| ODH Notebook           | key contact name | date | ?         |
 
 ## References
 
