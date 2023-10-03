@@ -1,16 +1,16 @@
 # Project CodeFlare - MCAD Custom Metrics Emission
 
 
-|                |                                                                                  |
-| -------------- | -------------------------------------------------------------------------------- |
-| Date           | 10/03/2023                                                                       |
-| Scope          |                                                                                  |
-| Status         | implementable                                                                    |
-| Authors        | [Ronen Schaffer](@ronensc), [Rachel Brill](@rachelt44), Eran Raichstein(@eranra) |
-| Supersedes     | N/A                                                                              |
-| Superseded by: | N/A                                                                              |
-| Issues         |                                                                                  |
-| Other docs:    | none                                                                             |
+|                |                                                                                   |
+| -------------- | --------------------------------------------------------------------------------- |
+| Date           | 10/03/2023                                                                        |
+| Scope          |                                                                                   |
+| Status         | implementable                                                                     |
+| Authors        | [Ronen Schaffer](@ronensc), [Rachel Brill](@rachelt44), [Eran Raichstein](@eranra)|
+| Supersedes     | N/A                                                                               |
+| Superseded by: | N/A                                                                               |
+| Issues         |                                                                                   |
+| Other docs:    | none                                                                              |
 
 ## What
 
