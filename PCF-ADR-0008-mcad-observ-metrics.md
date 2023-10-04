@@ -19,6 +19,7 @@ Emit MCAD custom metrics such as total allocatable CPU, GPU and memory.
 ## Why
 
 MCAD custom metrics information is important for enabling generation of an overall up-to-date observablity view of the running app wrappers and connecting to other stack layers.
+This will align MCAD with other existing components in OCP that expose metrics in Prometheus format and allow the collection and building of cross-component context.
 
 ## Goals
 
@@ -32,12 +33,13 @@ The following are not included in this ADR:
 
 ## How
 
-Register collected metrics with the runtime controller of the CodeFlare Operator
+Register collected metrics with the runtime controller of the CodeFlare Operator. The metrics will be exposed in standard Prometheus format.
 
 
 ## Alternatives
 
 Given the CodeFlare operator re-design that enables off-the-shelf exposure of metrics, we have not currently considered any alternatives.
+Currently, the MCAD dashboard relies on external components to report the information and there is no guaranty that what MCAD is using aligns to that information.
 
 
 ## Stakeholder Impacts
