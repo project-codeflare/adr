@@ -40,15 +40,30 @@ This will change in Q1 or early Q2 of 2024 with the introduction of Authorino. T
 the resources created by the CodeFlare Operator's RayCluster reconciler will change and there will likely no longer be
 a need for adding the OAuth Proxy sidecar to the head node definition.
 
+### TLS certificates
+
+https://docs.openshift.com/container-platform/4.11/security/certificate_types_descriptions/service-ca-certificates.html
+
+### Mutating Webhook
+
+A mutating webhook will be used in order to add the OAuth sidecar to the head node, change the head services exposed,
+and add annotations for TLS certificates. There will need to be OAuth proxies for `dashboard` and `client` ports.
+
+### CFO RayCluster Controller
+
+The RayCluster Controller in the CFO will create the other necessary kubernetes objects (CRB, Service, ServiceAccount,
+Ingress/Route)
+
 ## Blockers
 
-* Currently KubeRay is using `update` rather than `patch` to update the CRs status. This may cause the two reconcilers
-  to fight over the state of the resource. We should make changes upstream so that changes are made with a `patch`
-  before creating our own reconciler.
+* KubeRay does not authenticate when communicating with the Jobs API. Until we use ServiceMesh, which can specify rules
+for which pods can communicate with eachother, we need the controller to authenticate using the KubeRay service account
+by default. We can see if these changes will be readily accepted upstream.
 
 ## Open Questions
 
-* How to enable TLS? (certificate controller, or )
+* how to report status of objects created by CFO? (Should we rely on annotations?). Could we create a CRD which is owned
+by the RayCluster that just reports the status?
 
 ## Alternatives
 
