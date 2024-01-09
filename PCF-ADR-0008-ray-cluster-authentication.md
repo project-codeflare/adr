@@ -24,6 +24,7 @@ unified login experience for the whole of ODH by way of OpenShift OAuth
 * Protect the dashboard from unauthenticated access by way of an OAuth flow
 * Protect the API endpoint from unauthenticated access by way of bearer tokens
 * Enable HTTPS by default for accessing the RayCluster API and Dashboard
+* Support authenticated interactive session
 
 ## Non-Goals
 
@@ -54,16 +55,21 @@ and add annotations for TLS certificates. There will need to be OAuth proxies fo
 The RayCluster Controller in the CFO will create the other necessary kubernetes objects (CRB, Service, ServiceAccount,
 Ingress/Route)
 
-## Blockers
+## Gaps
 
 * KubeRay does not authenticate when communicating with the Jobs API. Until we use ServiceMesh, which can specify rules
-for which pods can communicate with eachother, we need the controller to authenticate using the KubeRay service account
+for which pods can communicate with each other, we need the controller to authenticate using the KubeRay service account
 by default. We can see if these changes will be readily accepted upstream.
+
+* Ray CLI does not support setting headers for authentication
 
 ## Open Questions
 
 * how to report status of objects created by CFO? (Should we rely on annotations?). Could we create a CRD which is owned
-by the RayCluster that just reports the status?
+by the RayCluster that just reports the status? 
+
+* Will the Ray CLI work with the new authenticated endpoint? (short answer is no due to the stated blocker)? The open
+question is, will gRPC protocol work?
 
 ## Alternatives
 
@@ -74,8 +80,7 @@ by the RayCluster that just reports the status?
 
 ## Risks
 
-If upstream KubeRay doesn't accept changes to how they update the CRs status then we will likely have to switch gears
-and use a mutating webhook instead.
+If authenticated requests in KubeRay operator and Ray CLI aren't accepted we need to have work arounds for customers.
 
 ## Stakeholder Impacts
 
